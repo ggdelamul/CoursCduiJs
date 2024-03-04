@@ -1,0 +1,25 @@
+/*Reset css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root {
+  --backgroundColor: #1e2337;
+}
+html {
+  font-size: 62.5%; /*1 rem = 10px; Par défaut 100% 1 rem = 16px*/
+}
+body {
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--backgroundColor);
+}
