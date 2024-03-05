@@ -18,8 +18,40 @@ body {
 }
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: var(--backgroundColor);
+}
+/***********projet baniere **********************/
+.cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  opacity: 1;
+  transition: 0.5s;
+}
+.cookies-btn {
+  display: flex;
+}
+.btn {
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+.btn-success {
+  background-color: #1e2337;
+}
+.btn-param {
+  background-color: hsl(0, 0%, 30%);
 }
