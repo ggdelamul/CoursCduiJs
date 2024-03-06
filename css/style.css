@@ -21,6 +21,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 50px;
   height: 100vh;
   background-color: var(--backgroundColor);
 }
@@ -54,4 +55,21 @@ main {
 }
 .btn-param {
   background-color: hsl(0, 0%, 30%);
+}
+/* proejt you tube */
+.bloc-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.abo {
+  padding: 1rem;
+  background-color: #b5b5b5;
+  border: none;
+  color: var(--backgroundColor);
+  transition: 0.5s;
+  min-width: 150px;
+}
+.colorAbo {
+  background-color: red;
 }

@@ -45,3 +45,16 @@ btnParam.addEventListener("click", () => {
     divCookie.style.opacity = 0;
     window.location.href = "parametres.html";
 })
+
+//////////////////projet youtube ///////////////
+////pseudo code au clic sur le bouton le bouton change de couleur et le texte change 
+///notion de condition 
+const btnAbonnezVous = document.querySelector('.abo');
+btnAbonnezVous.addEventListener('click', () => {
+    btnAbonnezVous.classList.toggle('colorAbo');
+    if (btnAbonnezVous.innerText === "Abonnez vous") {
+        btnAbonnezVous.innerText = "Abonné!";
+    } else {
+        btnAbonnezVous.innerText = "Abonnez vous";
+    }
+});
