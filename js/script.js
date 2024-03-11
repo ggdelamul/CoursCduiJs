@@ -48,7 +48,8 @@ btnParam.addEventListener("click", () => {
 
 //////////////////projet youtube ///////////////
 ////pseudo code au clic sur le bouton le bouton change de couleur et le texte change 
-///notion de condition 
+
+///notion de condition
 const btnAbonnezVous = document.querySelector('.abo');
 btnAbonnezVous.addEventListener('click', () => {
     btnAbonnezVous.classList.toggle('colorAbo');
@@ -58,3 +59,36 @@ btnAbonnezVous.addEventListener('click', () => {
         btnAbonnezVous.innerText = "Abonnez vous";
     }
 });
+
+
+
+//////projet social ///////////
+const icones = document.querySelectorAll('.social>a');
+const modal = document.querySelector('.modal');
+const titreSocial = document.querySelector('span');
+const btnAnnuler = document.querySelector('.btn-cancel');
+const btnSocial = document.querySelector('.btn-social');
+let socialLink = ["fb.com", "insta.com", "lk.com"];
+icones.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.opacity = 1;
+        let titre = link.dataset.titre;
+        titreSocial.innerText = titre;
+        switch (titre) {
+            case "Page Facebook":
+                btnSocial.href = "fb.com"
+                break;
+            case "Page Instagram":
+                btnSocial.href = "insta.com"
+                break;
+            case "Page Linkedin":
+                btnSocial.href = "lk.com"
+                break;
+        }
+    })
+});
+btnAnnuler.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.style.opacity = 0;
+})

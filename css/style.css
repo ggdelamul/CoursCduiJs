@@ -73,3 +73,45 @@ main {
 .colorAbo {
   background-color: red;
 }
+/* projet Social */
+.social {
+  position: fixed;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 15px;
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 15px;
+}
+.social a {
+  cursor: pointer;
+  color: white;
+}
+.modal {
+  display: flex;
+  border: solid 1px white;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 500px;
+  height: 300px;
+  background-color: var(--backgroundColor);
+  opacity: 0;
+  position: absolute;
+  z-index: 25;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.modal a {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background-color:hsl(0, 0%, 30%) ;
+}
