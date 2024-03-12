@@ -88,3 +88,16 @@ btnAnnuler.addEventListener('click', (e) => {
     e.preventDefault();
     modal.style.opacity = 0;
 })
+
+
+////projet menu burger 
+const bars = document.querySelector('.fa-bars');
+console.log(bars);
+const menu = document.querySelector('.navbar-mobile .modalMenu');
+console.log(menu);
+bars.addEventListener("click", () => {
+    console.log("click");
+    menu.classList.toggle('displayMenuMobile');
+    bars.classList.toggle('fa-close');
+    bars.classList.toggle('fa-bars');
+})
