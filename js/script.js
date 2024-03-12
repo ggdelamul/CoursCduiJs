@@ -3,8 +3,6 @@ console.log("coucou ✌️");
 ///récupérer le titre 
 const titre = document.querySelector('h1');
 console.log(titre);
-
-
 let nom = "Jhon";//chaine de caractère 
 let prenom = "Doe";
 let nombre = 42; //nombre , peux être un nombre décimal 
