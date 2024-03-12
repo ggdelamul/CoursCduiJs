@@ -100,4 +100,4 @@ bars.addEventListener("click", () => {
     menu.classList.toggle('displayMenuMobile');
     bars.classList.toggle('fa-close');
     bars.classList.toggle('fa-bars');
-})
+});
