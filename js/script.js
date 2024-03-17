@@ -64,7 +64,6 @@ const modal = document.querySelector('.modal');
 const titreSocial = document.querySelector('span');
 const btnAnnuler = document.querySelector('.btn-cancel');
 const btnSocial = document.querySelector('.btn-social');
-let socialLink = ["fb.com", "insta.com", "lk.com"];
 icones.forEach((link) => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -101,3 +100,27 @@ bars.addEventListener("click", () => {
     bars.classList.toggle('fa-close');
     bars.classList.toggle('fa-bars');
 });
+
+//projet fiche produit 
+const vignettes = document.querySelectorAll('.small');
+const fullImg = document.getElementById('full');
+console.log(fullImg);
+console.log(vignettes);
+const pCpt = document.querySelector('.cpt');
+const btnAdd = document.querySelector('.btn-add');
+let cpt = 0;
+vignettes.forEach((vignette) => {
+    vignette.addEventListener("click", () => {
+        let imgSource = vignette.getAttribute('src');
+        fullImg.setAttribute('src', imgSource);
+    })
+})
+btnAdd.addEventListener("click", (e) => {
+    e.preventDefault();
+    cpt++;
+    if (cpt > 1) {
+        pCpt.textContent = `Votre panier contient ${cpt} articles`;
+    } else {
+        pCpt.textContent = "Votre panier contient 1 article";
+    }
+})
