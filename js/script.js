@@ -50,11 +50,18 @@ btnParam.addEventListener("click", () => {
 ////pseudo code au clic sur le bouton le bouton change de couleur et le texte change 
 ///notion de condition 
 const btnAbonnezVous = document.querySelector('.abo');
+const icone = document.querySelector('.icone');
 btnAbonnezVous.addEventListener('click', () => {
     btnAbonnezVous.classList.toggle('colorAbo');
     if (btnAbonnezVous.innerText === "Abonnez vous") {
         btnAbonnezVous.innerText = "Abonné!";
+        icone.classList.add('fa-smile-o');
+        icone.classList.remove('fa-meh-o');
+        icone.style.color = "yellow";
     } else {
         btnAbonnezVous.innerText = "Abonnez vous";
+        icone.classList.add('fa-meh-o');
+        icone.classList.remove('fa-smile-o');
+        icone.style.color = "white";
     }
 });
