@@ -5,8 +5,8 @@ const titre = document.querySelector('h1');
 console.log(titre);
 //modifier la couleur du titre 
 titre.style.color = 'red';
-let nom = "Jhon";
-let prenom = "Doe";
+let nom = "Mon";
+let prenom = "Shop";
 let nomComplet = nom + " " + prenom;
 titre.textContent = nomComplet;
 let nombre = 42;
@@ -142,9 +142,18 @@ vignettes.forEach((vignette) => {
 const divAccroche = document.querySelector('.toast-container');
 let makeToast = () => {
     const notification = document.createElement('div');
+    const barreDefilante = document.createElement('div');
+    const paragrapheToast = document.createElement('p');
     notification.classList.add('toast');
-    notification.textContent = "produit ajouté au panier";
+    barreDefilante.classList.add('barreDefilante');
+    paragrapheToast.textContent = "produit ajouté au panier";
+    notification.appendChild(paragrapheToast);
+    notification.appendChild(barreDefilante);
     divAccroche.appendChild(notification);
+    setTimeout(() => {
+        notification.remove();
+    }, 2000);
+    //le temps est exprimé en ms 
 }
 
 

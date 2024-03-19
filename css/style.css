@@ -15,6 +15,7 @@ body {
   font-size: 1.4rem;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  background-color: var(--backgroundColor);
 }
 main {
   display: flex;
@@ -22,7 +23,6 @@ main {
   justify-content: center;
   align-items: center;
   row-gap: 50px;
-  background-color: var(--backgroundColor);
 }
 /***********projet baniere **********************/
 .cookies {
@@ -258,7 +258,10 @@ button.btn-add:hover {
 /*projet pop up */
 footer {
   height: 100vh;
-  background-color: var(--backgroundColor);
+
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 .modal-container {
   height: 100vh;
@@ -308,8 +311,26 @@ footer {
 }
 /*projet toast notification*/
 .toast {
-  padding: 1rem;
+  padding-top: 1rem;
   margin: 0.7rem;
   border: 1px solid rgb(181, 181, 181);
   border-left: 3px solid green;
+}
+.toast > p {
+  padding-left: 1rem;
+}
+.barreDefilante {
+  width: 100%;
+  height: 5px;
+  background-color: #f92995;
+  animation: reduce 2s;
+}
+
+@keyframes reduce {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
