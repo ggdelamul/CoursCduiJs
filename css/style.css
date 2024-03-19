@@ -306,3 +306,10 @@ footer {
   border: none;
   width: 100%;
 }
+/*projet toast notification*/
+.toast {
+  padding: 1rem;
+  margin: 0.7rem;
+  border: 1px solid rgb(181, 181, 181);
+  border-left: 3px solid green;
+}
