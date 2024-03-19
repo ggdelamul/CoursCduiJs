@@ -67,7 +67,7 @@ const btnSocial = document.querySelector('.btn-social');
 icones.forEach((link) => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        modal.style.opacity = 1;
+        modal.style.display = "block";
         let titre = link.dataset.titre;
         titreSocial.innerText = titre;
         switch (titre) {
@@ -115,6 +115,7 @@ vignettes.forEach((vignette) => {
         fullImg.setAttribute('src', imgSource);
     })
 })
+
 btnAdd.addEventListener("click", (e) => {
     e.preventDefault();
     cpt++;
@@ -123,4 +124,33 @@ btnAdd.addEventListener("click", (e) => {
     } else {
         pCpt.textContent = "Votre panier contient 1 article";
     }
+})
+
+
+
+
+
+//projet popup
+const modalCode = document.querySelector('.modal-container');
+const btnCode = document.querySelector('.btn-code');
+console.log(btnCode);
+const code = document.querySelector('.code');
+const iconeCode = document.querySelector('.fa-close');
+let isReading = false;
+window.addEventListener('scroll', () => {
+    let hauteur = document.documentElement.scrollTop;
+    if (!isReading) {
+        if (hauteur > 320) {
+            console.log('appartition div ');
+            modalCode.style.display = "flex";
+            isReading = true;
+        }
+    }
+})
+
+btnCode.addEventListener("click", () => {
+    code.style.display = "block";
+})
+iconeCode.addEventListener('click', () => {
+    modalCode.style.display = "none";
 })

@@ -103,7 +103,7 @@ main {
   width: 500px;
   height: 300px;
   background-color: var(--backgroundColor);
-  opacity: 0;
+  display: none;
   position: fixed;
   z-index: 25;
   top: 50%;
@@ -253,4 +253,56 @@ button.btn-add:hover {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/*projet pop up */
+footer {
+  height: 100vh;
+  background-color: var(--backgroundColor);
+}
+.modal-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: aqua;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-detail {
+  background-color: white;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  padding: 3rem;
+  color: black;
+}
+.modal-detail i {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  font-size: 2rem;
+  padding: 1rem;
+  color: grey;
+}
+.modal-titre {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.code {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  display: none;
+}
+.btn-code {
+  height: 4rem;
+  background-color: rgb(231, 171, 61);
+  color: white;
+  padding: 1rem;
+  border: none;
+  width: 100%;
 }
