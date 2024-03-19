@@ -85,7 +85,7 @@ icones.forEach((link) => {
 });
 btnAnnuler.addEventListener('click', (e) => {
     e.preventDefault();
-    modal.style.opacity = 0;
+    modal.style.display = "none";
 })
 
 
