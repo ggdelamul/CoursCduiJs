@@ -114,12 +114,14 @@ window.addEventListener('scroll', () => {
             console.log('appartition div ');
             modalCode.style.display = "flex";
             isReading = true;
+
         }
     }
 })
 
 btnCode.addEventListener("click", () => {
     code.style.display = "block";
+    btnCode.style.display = "none";
 })
 iconeCode.addEventListener('click', () => {
     modalCode.style.display = "none";
@@ -133,7 +135,7 @@ const pCpt = document.querySelector('.cpt');
 const btnAdd = document.querySelector('.btn-add');
 let cpt = 0;
 vignettes.forEach((vignette) => {
-    vignette.addEventListener("click", () => {
+    vignette.addEventListener("mouseover", () => {
         let imgSource = vignette.getAttribute('src');
         fullImg.setAttribute('src', imgSource);
     })
@@ -169,6 +171,13 @@ btnAdd.addEventListener("click", (e) => {
     makeToast();
 })
 
+/*projet parrallax*/
+const parrallax = document.querySelector('.parrallax');
+window.addEventListener("scroll", () => {
+    console.log(window.scrollY);
+    let height = window.scrollY / 2;
+    parrallax.style.backgroundPositionY = -height + "px";
+})
 
 
 

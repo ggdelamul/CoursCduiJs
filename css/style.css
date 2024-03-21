@@ -334,3 +334,13 @@ footer {
     width: 0%;
   }
 }
+
+/*projet parrallax*/
+.parrallax {
+  height: 450px;
+  width: 100%;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
