@@ -179,6 +179,17 @@ window.addEventListener("scroll", () => {
     parrallax.style.backgroundPositionY = -height + "px";
 })
 
+/*projet ripple*/
+const rippleBtn = document.querySelector('.ripple-button');
+rippleBtn.addEventListener('click', (event) => {
+    const divCircle = document.createElement('div');
+    divCircle.classList.add('circle');
+    rippleBtn.appendChild(divCircle);
+    divCircle.style.top = event.pageY - rippleBtn.offsetTop + "px";
+    divCircle.style.left = event.pageX - rippleBtn.offsetLeft + "px";
+    divCircle.style.transform = "translate(-50%,-50%) scale(0)";
+})
+
 
 
 

@@ -344,3 +344,45 @@ footer {
   background-size: cover;
   background-position-x: center;
 }
+/* projet ripple*/
+.ripple-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.ripple {
+  width: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 15rem;
+}
+.ripple-button {
+  background-color: yellow;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 3rem 8rem;
+  margin: 25px;
+  cursor: pointer;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  opacity: 0.6;
+  position: absolute;
+  animation: ripple 1s ease-in-out;
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+}
